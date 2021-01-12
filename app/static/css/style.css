@@ -1,0 +1,85 @@
+#competencias, 
+#contacto {
+    padding-top: 60px;
+    min-height: 700px;
+}
+
+#principal {
+    padding: 100px 5% 20px;
+    min-height: 700px;
+}
+
+#competencias > div >  h3 {
+    color: white;
+}
+
+#equipo {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#enlaces {
+    color:white;
+    padding-top: 60px;
+    min-height: 100%;
+}
+
+.navbar a {
+    font-weight: bold;
+    
+}
+
+.navbar-dark {
+    background-color:black;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar, .modal { 
+    font-family: 'Poiret One', cursive;
+}
+
+.bg-principal {
+    background-image: url('../img/fondo_medicina.jpg');
+    background-size: cover;
+}
+
+.jumbotron {
+    color: white;
+    background: rgb(0, 0, 0); /* Para navegadores antiguos */
+    background: rgba(0, 0, 0, 0.5); 
+ }
+
+ .card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.media {
+    margin: 20px 5% 50px 10%;
+}
+
+#contact-form { 
+    padding-top: 3rem; 
+} 
+
+textarea { 
+    resize: none; 
+}
+
+.footer p {
+    display: inline;
+}
+/* barra de nav*/
+
+.login {
+    list-style-type: none;
+    float: left;
+}
+ul {
+    list-style-type: none;
+}
+.form-group {
+    margin: 1em; 
+}
+#titulo {
+    color: aliceblue;
+}

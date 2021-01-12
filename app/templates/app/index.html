@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<header>
+{% block barra %}
+{{block.super}}
+{% endblock %}
+</header>
+<body>
+  {% block body%}
+    <!-- Section: Principal -->
+    <div class="container-fluid bg-principal" id="principal">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="jumbotron jumbotron-main">
+              <h2>Grupo ControlMed</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Section: Principal -->
+  
+      <!-- Section: Beneficios -->
+      <div class="container-fluid bg-dark" id="beneficios">
+        <div class="row">
+          <h3 id="titulo">Beneficios</h3>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-3">
+            <div class="card">
+              <h3 class="card-header">Agende citas medicas con recordatorio</h3>
+              <div class="card-body">
+                <h4 class="card-title"><img src="{% static 'img/pexels-戴-宇扬-4063550.jpg' %}" height="100px"></h4>
+                <p class="card-text">Agregue sus horas medicas en el calendario, ya no pierda mas sus citas.</p>
+                <a href="#!" class="btn btn-success">Ver mas</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card">
+              <h3 class="card-header">Lleve un control de sus medicamentos</h3>
+              <div class="card-body">
+                <h4 class="card-title"><img src="{% static 'img/medications-cure-tablets-pharmacy-51929.jpeg' %}" height="100px"></h4>
+                <p class="card-text">Con este sistema es mas fácil llevar un control de su medicación.</p>
+                <br>
+                <a href="#!" class="btn btn-success">Ver mas</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card">
+              <h3 class="card-header">Vea el resultado de sus examenes</h3>
+              <div class="card-body">
+                <h4 class="card-title"><img src="{% static 'img/pexels-pixabay-415779.jpg' %}" height="100px"></h4>
+                <p class="card-text">Revise en cualquier momento los resultados de sus examenes.</p>
+                <br>
+                <a href="../sitioweb/examen_medico.html" class="btn btn-success">Ver mas</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card">
+              <h3 class="card-header">Sus datos estan protegidos</h3>
+              <div class="card-body">
+                <h4 class="card-title"><img src="{% static 'img/pexels-photo-3831631.webp' %}" height="100px"></h4>
+                <p class="card-text">Manejamos sus datos con total confidencialidad</p>
+                <br>
+                <a href="#!" class="btn btn-success">Ver mas</a>
+              </div>
+            </div>
+          </div>
+      <!-- End Section: Beneficios-->
+      <!--Section: Noticias-->
+      <div class="container-fluid" style="background-color:coral;">
+        <h3 id="titulo">Noticias</h3>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <h3 class="card-header">Araucanía</h3>
+              <div class="card-body">
+                <h4 class="card-title"><img src="{% static 'img/pexels-anna-shvets-3902732.jpg' %}" height="100px"></h4>
+                <p class="card-text">Subsecretaria de Salud Pública inaugura Cuadrilla Sanitaria y nueva Residencia en la Araucanía</p>
+                <a href="#!" class="btn btn-info">Ver mas</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <h3 class="card-header">Nacional</h3>
+              <div class="card-body">
+                <h4 class="card-title"><img src="{% static 'img/covid.jpeg' %}" height="100px"></h4>
+                <p class="card-text">COVID-19: Positividad de las últimas 24 horas alcanza 4% a nivel nacional</p>
+                <a href="#!" class="btn btn-info">Ver mas</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <h3 class="card-header">Protocolos</h3>
+              <div class="card-body">
+                <h4 class="card-title"><img src="{% static 'img/playa.jpeg' %}" height="100px"></h4>
+                <p class="card-text">Autoridades dan a conocer el Protocolo de manejo y prevención de Covid-19 en playas</p>
+                <a href="#!" class="btn btn-info">Ver mas</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-- End Section: Noticias--> 
+  
+      <!-- Section: Equipo -->
+      <div class="container-fluid bg-light" id="equipo">
+        <div class="row">
+          <h3>Nuestro Equipo</h3>
+        </div>
+        <div class="row">
+          <div id="team-carousel" 
+              class="carousel slide" 
+              data-ride="carousel" 
+              data-interval="3000">
+            <div class="carousel-inner" style="padding: 4rem;" role="listbox">
+              <div style="height: 400px" class="carousel-item active">
+                <img class="d-block img-fluid carousel-img" src="{% static 'img/group1.jpg' %}">
+                <div class="carousel-caption">
+                  Grupo Front End
+                </div>
+              </div>
+              <div style="height: 400px" class="carousel-item">
+                <img class="d-block img-fluid carousel-img" src="{% static 'img/group2.jpg' %}">
+                <div class="carousel-caption">
+                  Grupo Back End
+                </div>
+              </div>
+              <div style="height: 400px" class="carousel-item">
+                <img class="d-block img-fluid carousel-img" src="{% static 'img/group3.jpg' %}">
+                <div class="carousel-caption">
+                  Grupo DevOps
+                </div>
+              </div>
+            </div>
+            <a class="left carousel-control" 
+                href="#team-carousel" 
+                role="button" 
+                data-slide="prev">
+              <span class="icon-prev" aria-hidden="true"></span>
+            </a>
+            <a class="right carousel-control" 
+                href="#team-carousel" 
+                role="button" 
+                data-slide="next">
+              <span class="icon-next" aria-hidden="true"></span>
+            </a>
+            <ol class="carousel-indicators">
+              <li data-target="#team-carousel" 
+                  data-slide-to="0" 
+                  class="active"></li>
+              <li data-target="#team-carousel" 
+                  data-slide-to="1"></li>
+              <li data-target="#team-carousel" 
+                  data-slide-to="2"></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <!-- End Section: Equipo -->  
+{% endblock %}      
+</body>
+<footer>
+{% block footer %}
+{{block.super}}
+{% endblock %}
+</footer>
+</html>

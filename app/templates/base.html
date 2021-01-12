@@ -1,0 +1,284 @@
+{% load static %}
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>ControlMed</title>
+    <meta charset="utf-8">
+    <meta name="viewport" 
+        content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Loading Bootstrap CSS -->
+    <link 
+      rel="stylesheet" 
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
+      crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" 
+        rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+  <header>
+    {% block barra %}
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="#">ControlMed</a>
+
+      <!-- Navigation Bar Hamburger-->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navigation"
+        aria-expanded="false"
+        aria-controls="navigation" 
+        aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- End Navigation Bar Hamburger -->
+      <!-- Navigation Links -->
+      <div class="collapse navbar-collapse" id="navigation">
+         <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link scroll-trigger" 
+                href="../sitioweb/Beneficios.html">
+                  Beneficios
+              </a>
+            </li>
+            <li class="nav-item">
+              <a 
+                class="nav-link scroll-trigger" 
+                href="#Noticias">
+                  Noticias
+              </a>
+            </li>
+            <li class="nav-item">
+              <a 
+                class="nav-link scroll-trigger" 
+                href="#equipo">
+                  Equipo
+              </a>
+            </li>
+            <li class="nav-item">
+              <a 
+                class="nav-link scroll-trigger" 
+                href="#enlaces"> 
+                  Enlaces
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link scroll-trigger" 
+                href="#contacto">
+                  Contacto
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                  href="#"
+                  class="nav-link dropdown-toggle"
+                  data-toggle="dropdown"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false">
+                      Perfil <span class="caret"></span>
+              </a>
+              <div class="dropdown-menu">
+                <form class="px-4 py-3">
+                  <div class="form-group">
+                    <label for="exampleDropdownFormEmail1">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@ejemplo.com">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleDropdownFormPassword1">Contraseña</label>
+                    <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Contraseña">
+                  </div>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                      <label class="form-check-label" for="dropdownCheck">
+                        Recuerdame
+                      </label>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Ingresar</button>
+                </form>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'app:registro' %}">Regístrese</a>
+                <a class="dropdown-item" href="#">¿Olvidó la contraseña?</a>
+              </div>
+            </li>
+          </ul>
+         <form class="form-inline my-2 my-lg-0">
+           <input class="form-control mr-sm-2" 
+              type="text"
+              placeholder="Busqueda" 
+              aria-label="Search">
+           <button class="btn btn-outline-success border-dark 
+                    font-weight-bold text-white my-2 my-sm-0"
+                    type="submit">Búsqueda</button>
+         </form>-->
+      </div>
+      <!-- Navigation Links -->
+    </nav>
+    {% endblock %}
+
+  </header>
+ 
+    
+    <!-- End Navigation Bar -->
+
+    <body>
+      {% block body %}
+
+      {% endblock %}
+
+    </body>   
+    
+    <!-- Section: Enlaces -->
+
+  <footer>
+    {% block footer %} 
+    <div class="container-fluid bg-dark" id="enlaces">
+      <div class="row">
+          <h3>Enlaces de Interés</h3>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="media">
+            <img class="d-flex mr-3" src="{% static 'img/flag-64.png' %}" 
+                alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 class="mt-0">Enlaces Rapidos</h5>
+              <ul>
+                <li><a href="www.minsal.cl">Minsal</a></li>
+                <li><a href="www.fonasa.cl">Fonasa</a></li>
+                <li><a href="www.milicenciamedica.cl">Compin</a></li>
+                <li><a href="www.saludresponde.cl">Salud Responde</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="media">
+            <img class="d-flex mr-3" src="{% static 'img/world-64.png' %}" 
+                alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 class="mt-0">Siguenos en nuestras redes sociales</h5>
+              <ul>
+                <li><a href="{% url 'app:index' %}">Facebook</a></li>
+                <li><a href="www.twitter.com">Twitter</a></li>
+                <li><a href="www.instagram.com">Instagram</a></li>
+                <li><a href="www.youtube.com">Youtube</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- End Section: Enlaces -->
+
+    <!-- Section: Contacto -->
+    <div class="container-fluid bg-light" id="contacto">
+      <div class="row">
+        <h2>Contáctanos</h2>
+      </div>
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-sm-6" id="contact-form">
+          <form>
+            <div class="form-group">
+              <label for="contact-name">Nombre</label>
+              <input type="text" class="form-control" id="contact-name" 
+                  placeholder="Tu Nombre">
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email</label>
+              <input type="email" class="form-control" id="contact-email" 
+                  placeholder="Tu Email">
+            </div>
+            <div class="form-group">
+              <label for="contact-msg">Email</label>
+              <textarea class="form-control" id="contact-msg" 
+                  placeholder="Tu Mensaje" rows="4"></textarea>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn btn-outline-secondary">Enviar</button>
+              <button type="button" class="btn btn-outline-secondary">Limpiar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- End Section: Contacto -->
+
+    <footer class="footer bg-dark text-center">
+      <p class="text-muted">&copy; 2020 Awakelab.</p>
+      <p class="text-muted">Grupo Full Stack Python</p>
+    </footer>
+
+    <!-- MODAL FORMS -->
+    <div class="modal" id="profile-modal" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"
+              aria-label="Close"><span aria-hidden="true">&times;</span>
+            </button>
+            <p class="modal-title" id="profile-modal-label">Perfil</p>
+          </div>
+            <div class="modal-body">
+              Perfil
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success">Guardar</button>
+              <button type="button" 
+                  class="btn btn-secondary" 
+                  data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+     </div>
+    </div>
+    <div class="modal" id="settings-modal" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" 
+              aria-label="Close"><span aria-hidden="true">&times;</span>
+            </button>
+            <p class="modal-title" id="settings-modal-label">Configuración</p>
+          </div>
+          <div class="modal-body">
+            Configuración
+          </div>
+          <div class="modal-footer">
+            <button type="button" 
+                class="btn btn-success">Guardar</button>
+            <button type="button" 
+                class="btn btn-secondary" 
+                data-dismiss="modal">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- END MODAL FORMS -->
+
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script 
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+      crossorigin="anonymous">
+    </script>
+    <script 
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
+      crossorigin="anonymous">
+    </script>
+    <script 
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" 
+      crossorigin="anonymous">
+    </script>
+    {% endblock %}
+  </footer> 
+</html>
