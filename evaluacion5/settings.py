@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
+    'formularios',
 ]
 
 MIDDLEWARE = [
@@ -121,3 +122,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+# destino donde se copian statics luego de python manage.py collectstatic
+# serán buscados en directorio static de cada app y en directorio static en base dir
+# si es que se define más abajo con STATICFILES_DIR
+STATIC_ROOT = os.path.join(BASE_DIR, 'root')

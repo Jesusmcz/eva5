@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<header>
+    {% block barra %}
+    {{block.super}}
+    {% endblock %}
+</header>
+<body>
+    {% block body %}
+    <form method="POST"> 
+        {% csrf_token %} 
+        Está seguro de eliminar el usuario con id = {{id}}? 
+        <input type="submit" value="Sí" /> 
+        <a href="{% url 'formularios:eliminar_usuario' id=id%}">Cancelar</a> 
+    </form> 
+</body>
+{% endblock %}
+</html>
